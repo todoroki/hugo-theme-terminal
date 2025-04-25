@@ -46,6 +46,27 @@
     {{- end -}}
   </div>
 
+
+
+  <!-- 👇 ここに追加 -->
+    {{ with .Params.author }}
+    {{ $author := . }}
+    {{ with site.Data.authors }}
+      {{ with index . $author }}
+        <div class="author-bio" style="margin-top: 2rem; padding: 1rem; border-top: 1px solid #ccc;">
+          {{ if .avatar }}
+            <img src="{{ .avatar }}" alt="{{ .name }}" style="width:80px; border-radius: 50%; float: left; margin-right: 1rem;">
+          {{ end }}
+          <div>
+            <strong>{{ .name }}</strong><br>
+            <p>{{ .bio }}</p>
+          </div>
+          <div style="clear: both;"></div>
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
   {{ if eq .Type $.Site.Params.contentTypeName }}
     {{ partial "posts_pagination.html" . }}
   {{ end }}
