@@ -23,6 +23,7 @@
 - [How to edit the theme](#how-to-edit)
 - [Found a bug?](#bug)
 - [New cool idea or feature](#feature)
+- [Support](#support)
 - [License](#license)
 
 ## Features
@@ -129,7 +130,7 @@ This will clone the repository directly to the `themes/terminal` directory.
 git submodule add -f https://github.com/panr/hugo-theme-terminal.git themes/terminal
 ```
 
-This will install the repository as a sumbodule in the `themes/terminal` directory.
+This will install the repository as a submodule in the `themes/terminal` directory.
 
 ⚠️ If you encounter any issues with:
 
@@ -158,6 +159,10 @@ languageCode = "en-us"
 # Remove it if you use the theme as a remote Hugo Module.
 theme = "terminal"
 pagination.pagerSize = 5
+
+# Required for Chroma and the custom syntax highlighting.
+[markup.highlight]
+  noClasses = false
 
 [params]
   # dir name of your main content (default is `content/posts`).
@@ -303,8 +308,12 @@ This will help keeping the theme close to its roots, and also allow anyone who w
 
 Sounds OK? Cool, let's rock! 🤘
 
+## Support
+
+If you like what I'm doing and want to support my work. You can do it [here](https://ko-fi.com/pan_r). Thank you! ♥️
+
 ## License
 
-Copyright © 2019-2025 Radosław Kozieł ([@panr](https://radoslawkoziel.pl/))
+Copyright © 2019-2025 Radek Kozieł ([@panr](https://rkoziel.com/))
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/panr/hugo-theme-terminal/blob/master/LICENSE.md) for additional licensing information.
